@@ -28,7 +28,7 @@ module "resource_groups" {
 
 
 module "azure_key_vault_access_policy" {
-    source = "../"
+    source = "git::https://github.com/BrettOJ/tf-az-module-azure-key-vault-access-policy?ref=main"
     key_vault_id = var.key_vault_id
     tenant_id    = var.tenant_id
     object_id    = var.object_id
@@ -38,6 +38,6 @@ module "azure_key_vault_access_policy" {
     key_permissions         = var.key_permissions
     secret_permissions      = var.secret_permissions
     storage_permissions     = var.storage_permissions
-    
-  
 }
+
+
